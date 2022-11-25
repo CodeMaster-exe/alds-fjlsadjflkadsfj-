@@ -1,0 +1,155 @@
+            <div id="Fight" class="tabcontents">
+                <h1 style="text-align: center;" id="comTitle">Combat</h1>
+                <hr id="comLine">
+                <span id="mainPartOfCombat">
+                    <span id="youww">
+                        <img src="assets/img/combat/You/Default_you.webp" id="normalYouOuter" alt="You">
+                        <img src="assets/img/combat/You/rusty sword/Default_you_rustsword.webp" id="rustSwordYouOutwear" style="display: none;" alt="Rusty sword you">
+                        <br>
+                    </span>
+                    <span id="itemsCombat">
+                        <button onclick="fightFeilds()" style="padding: 10px;">Fight in feilds.</button>
+                        <br><br>
+                        <div class="tooltip" id="rustySword" style="display: none;" onclick="eqRustSqord()">
+                            <span class="tooltiptext"><span style="font-size: 25px; font-weight: 500;">Rusty Sword</span> <br><br> 3 Mele damage <br>1 Accuracy <br>1 Speed</span>
+                            <itembox class="trigger" id="full-grey2-bg">
+                                <div class="center top-bel">
+                                    <img src="assets/img/combat/RustySword.webp" alt="Rusty Sword Image">
+                                </div>
+                                <div class="center desc-bel">1</div>
+                            </itembox>
+                        </div>
+
+                        <div class="tooltip" id="string" style="display: none;">
+                            <span class="tooltiptext"><span style="font-size: 25px; font-weight: 500;">String</span> <br><br> I can use this to craft</span>
+                            <itembox class="trigger" id="full-grey2-bg">
+                                <div class="center top-bel">
+                                    <img src="assets/img/combat/feild/spider loot/String.webp" alt="String Image">
+                                </div>
+                                <div class="center desc-bel" id="amtString">0</div>
+                            </itembox>
+                        </div>
+
+                        <div class="tooltip" id="thickString" style="display: none;">
+                            <span class="tooltiptext"><span style="font-size: 25px; font-weight: 500;">THICK String</span> <br><br> I can use this to craft</span>
+                            <itembox class="trigger" id="full-grey2-bg">
+                                <div class="center top-bel">
+                                    <img src="assets/img/combat/feild/spider loot/ThickString.webp" alt="Thick String Image">
+                                </div>
+                                <div class="center desc-bel" id="amtThickString">0</div>
+                            </itembox>
+                        </div>
+
+                        <div class="tooltip" id="stinger" style="display: none;">
+                            <span class="tooltiptext"><span style="font-size: 25px; font-weight: 500;">Stinger</span>  <br><br> 3 Mele damage <br>1 Accuracy <br>2 Speed</span>
+                            <itembox class="trigger" id="full-grey2-bg">
+                                <div class="center top-bel">
+                                    <img src="assets/img/combat/feild/bee loot/Stinger.webp" alt="Stinger Image">
+                                </div>
+                                <div class="center desc-bel" id="amtStinger">0</div>
+                            </itembox>
+                        </div>
+
+                        <div class="tooltip" id="honey" style="display: none;">
+                            <span class="tooltiptext"><span style="font-size: 25px; font-weight: 500;">Honey</span>  <br><br> Maybe I can eat this</span>
+                            <itembox class="trigger" id="full-grey2-bg">
+                                <div class="center top-bel">
+                                    <img src="assets/img/combat/feild/bee loot/Honey.webp" alt="Honey Image">
+                                </div>
+                                <div class="center desc-bel" id="amtHoney">0</div>
+                            </itembox>
+                        </div>
+
+
+                        <div class="tooltip" id="bones" style="display: none;">
+                            <span class="tooltiptext"><span style="font-size: 25px; font-weight: 500;">Bones</span>  <br><br> Full of calcium</span>
+                            <itembox class="trigger" id="full-grey2-bg">
+                                <div class="center top-bel">
+                                    <img src="assets/img/combat/feild/chick loot/Bones.webp" alt="Bones Image">
+                                </div>
+                                <div class="center desc-bel" id="amtBones">0</div>
+                            </itembox>
+                        </div>
+
+                        
+                        <div class="tooltip" id="rawChick" style="display: none;">
+                            <span class="tooltiptext"><span style="font-size: 25px; font-weight: 500;">Raw Chicken</span>  <br><br> I can cook this somehow</span>
+                            <itembox class="trigger" id="full-grey2-bg">
+                                <div class="center top-bel">
+                                    <img src="assets/img/combat/feild/chick loot/RawChicken.webp" alt="Raw Chicken Image">
+                                </div>
+                                <div class="center desc-bel" id="amtRawChick">0</div>
+                            </itembox>
+                        </div>
+
+                        <div class="tooltip" id="whiteFeather" style="display: none;">
+                            <span class="tooltiptext"><span style="font-size: 25px; font-weight: 500;">Normal Fathers</span>  <br><br> Used for crafing</span>
+                            <itembox class="trigger" id="full-grey2-bg">
+                                <div class="center top-bel">
+                                    <img src="assets/img/combat/feild/chick loot/Feather.webp" alt="Feather Image">
+                                </div>
+                                <div class="center desc-bel" id="amtwhiteFeather">0</div>
+                            </itembox>
+                        </div>
+
+
+
+
+                        <div class="tooltip" id="cheese" style="display: none;">
+                            <span class="tooltiptext"><span style="font-size: 25px; font-weight: 500;">Rotten Cheese</span> <br><br> Eeeewwwwwwww</span>
+                            <itembox class="trigger" id="full-grey2-bg">
+                                <div class="center top-bel">
+                                    <img src="assets/img/combat/feild/rat loot/Cheese.webp" alt="Cheese Image">
+                                </div>
+                                <div class="center desc-bel" id="amtRotCheese">0</div>
+                            </itembox>
+                        </div>
+                    </span>
+                </span>
+                <div style="display: none" id="feildsBattle">
+                    <button onclick="goBack()">QUIT</button>
+                    <div id="battleGround1">
+                        <span id="you">
+                            <h2>You</h2>
+                            <h3 id="healthYou">Health: 10</h3>
+                            <h3 id="damageYou">Damage: 2</h3>
+                            <h3 id="speedYou">Speed: 1</h3>
+                            <img src="assets/img/combat/You/default_breath.gif" height="400" id="normalYou" width="220" alt="You">
+                            <img src="assets/img/combat/You/rusty sword/Default_you_rustsword.webp" id="inCombatYouRustSword" style="display: none;" alt="Rusty sword you">
+                        </span>
+                        <span id="monster">
+                            <h2 id="monsterName"></h2>
+                            <h3 id="healthMonster">Health: 5</h3>
+                            <h3 id="damageMonster">Damage: 1</h3>
+                            <h3 id="speedMonster">Speed: 1</h3>
+                            <img src="assets/img/combat/NPC/SpiderMonsterSigil.webp" style="display: none" id="feildMonster1" alt="Monster">
+                            <img src="assets/img/combat/NPC/Chicken_monster.webp" style="display: none" id="feildMonster2" alt="Monster">
+                            <img src="assets/img/combat/NPC/Rat_monster.webp" style="display: none" id="feildMonster3" alt="Monster">
+                            <img src="assets/img/combat/NPC/Bee_monster.webp" style="display: none" id="feildMonster4" alt="Monster">
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="feildLoot">
+                <h1 id="monsterType"></h1>
+                <hr>
+                <span id="amtStringLoot">String: 1</span>
+                <br>
+                <span id="amtThickStringLoot">Thick String: 1</span>
+                <br>
+                <span id="amtCheeseLoot">Cheese: 1</span>
+                <br>
+                <span id="amtStingLoot">Stinger: 1</span>
+                <br>
+                <span id="amtHoneyLoot" >Honey: 1</span>
+                <br>
+                <span id="amtBonesLoot">Bones: 1</span>
+                <br>
+                <span id="amtRawChickLoot">Raw Chicken: 1</span>
+                <br>
+                <span id="amtFeatherLoot">Feather: 1</span>
+                <hr>
+                <a class="close" onclick="popups('feildsLoot')">Collect Loot</a>
+            </div>
+
